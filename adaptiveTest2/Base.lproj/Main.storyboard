@@ -20,9 +20,6 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cloud" translatesAutoresizingMaskIntoConstraints="NO" id="gQC-hF-Z4z">
                                 <rect key="frame" x="150" y="20" width="300" height="197"/>
-                                <variation key="heightClass=regular-widthClass=regular" ambiguous="YES">
-                                    <rect key="frame" x="66" y="301.5" width="300" height="197"/>
-                                </variation>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z2W-zq-ck3" userLabel="TextContainer">
                                 <rect key="frame" x="0.0" y="247" width="600" height="353"/>
@@ -32,7 +29,7 @@
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="50"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
-                                        <variation key="heightClass=regular-widthClass=regular" ambiguous="YES" misplaced="YES">
+                                        <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
                                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="150"/>
                                             <rect key="frame" x="101" y="563.5" width="183.5" height="116.5"/>
                                         </variation>
@@ -42,8 +39,8 @@
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="50"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
-                                        <variation key="heightClass=regular-widthClass=regular" ambiguous="YES" misplaced="YES">
-                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="80"/>
+                                        <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="100"/>
                                             <rect key="frame" x="-28" y="100" width="441" height="116.5"/>
                                         </variation>
                                     </label>
@@ -54,6 +51,7 @@
                                     <constraint firstItem="9l8-K8-y9D" firstAttribute="top" secondItem="z2W-zq-ck3" secondAttribute="top" constant="10" id="Okr-3H-Brv">
                                         <variation key="heightClass=regular-widthClass=regular" constant="100"/>
                                     </constraint>
+                                    <constraint firstItem="9l8-K8-y9D" firstAttribute="width" secondItem="z2W-zq-ck3" secondAttribute="width" id="llh-fV-mpp"/>
                                     <constraint firstAttribute="centerX" secondItem="9l8-K8-y9D" secondAttribute="centerX" id="lq6-fF-Lb2"/>
                                     <constraint firstAttribute="bottom" secondItem="hYx-zA-0D8" secondAttribute="bottom" constant="10" id="o07-wH-fwk">
                                         <variation key="heightClass=regular-widthClass=regular" constant="100"/>
@@ -62,12 +60,13 @@
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
+                                        <exclude reference="llh-fV-mpp"/>
                                         <exclude reference="BNL-bl-orp"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=regular" ambiguous="YES">
-                                    <rect key="frame" x="416" y="20" width="384" height="780"/>
+                                <variation key="heightClass=regular-widthClass=regular">
                                     <mask key="constraints">
+                                        <include reference="llh-fV-mpp"/>
                                         <include reference="BNL-bl-orp"/>
                                     </mask>
                                 </variation>
